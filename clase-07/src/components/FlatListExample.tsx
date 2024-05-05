@@ -1,5 +1,5 @@
 import { StyleSheet, View, Text, FlatList } from "react-native";
-import { POSTS_DUMMY_DATA } from "../mock/data";
+import { POSTS_DUMMY_DATA } from "../../mock/data";
 
 export const FlatListExample = () => {
   return (

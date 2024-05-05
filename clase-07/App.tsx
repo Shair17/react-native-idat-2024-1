@@ -1,16 +1,17 @@
 import { Fragment } from "react";
 import { StatusBar } from "expo-status-bar";
-import { ViewExample } from "./components/ViewExample";
-import { ScrollExample } from "./components/ScrollExample";
-import { ImageExample } from "./components/ImageExample";
-import { TextInputExample } from "./components/TextInputExample";
-import { ButtonExample } from "./components/ButtonExample";
-import { SwitchExample } from "./components/SwitchExample";
-import { FlatListExample } from "./components/FlatListExample";
-import { SectionListExampe } from "./components/SectionListExampe";
-import { BackHandlerExample } from "./components/BackHandlerExample";
-import { ToastAndroidExample } from "./components/ToastAndroidExample";
-import { ActivityIndicatorExample } from "./components/ActivityIndicatorExample";
+import { ViewExample } from "./src/components/ViewExample";
+import { ScrollExample } from "./src/components/ScrollExample";
+import { ImageExample } from "./src/components/ImageExample";
+import { TextInputExample } from "./src/components/TextInputExample";
+import { ButtonExample } from "./src/components/ButtonExample";
+import { SwitchExample } from "./src/components/SwitchExample";
+import { FlatListExample } from "./src/components/FlatListExample";
+import { SectionListExampe } from "./src/components/SectionListExampe";
+import { BackHandlerExample } from "./src/components/BackHandlerExample";
+import { ToastAndroidExample } from "./src/components/ToastAndroidExample";
+import { ActivityIndicatorExample } from "./src/components/ActivityIndicatorExample";
+import { HomeScreen } from "./src/screens/HomeScreen";
 
 export default function App() {
   return (
@@ -27,7 +28,8 @@ export default function App() {
       {/* <SectionListExampe /> */}
       {/* <BackHandlerExample /> */}
       {/* <ToastAndroidExample /> */}
-      <ActivityIndicatorExample />
+      {/* <ActivityIndicatorExample /> */}
+      <HomeScreen />
     </Fragment>
   );
 }
