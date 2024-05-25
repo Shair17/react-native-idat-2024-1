@@ -1,8 +1,24 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Button } from "react-native";
+import { type NativeStackScreenProps } from "@react-navigation/native-stack";
+import { type StackScreenProps } from "../../App";
 
-export const ViewExample = () => {
+interface Props
+  extends NativeStackScreenProps<StackScreenProps, "ViewExample"> {}
+
+export const ViewExample: React.FC<Props> = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
+      <Button
+        title="Ir a la última pantalla"
+        onPress={() => {
+          const randomBoolean = Math.random() > 0.5;
+
+          navigation.push(
+            "InfoScreen",
+            randomBoolean ? { id: "123", name: "Juan" } : undefined
+          );
+        }}
+      />
       <Text style={styles.text}>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga in iusto
         pariatur ratione dignissimos, voluptate sequi dolor magni. Totam ratione
