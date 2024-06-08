@@ -1,7 +1,10 @@
 import React from 'react';
-import {View, StyleSheet, Button} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
+import {useLocation} from '../hooks/useLocation';
 
 export const StacksScreen = ({navigation}) => {
+  const {userLocation} = useLocation();
+
   return (
     <View style={styles.container}>
       <Button
@@ -24,6 +27,10 @@ export const StacksScreen = ({navigation}) => {
           navigation.navigate('TopTabsScreen');
         }}
       />
+
+      <View style={{marginTop: 20}}>
+        <Text>{JSON.stringify(userLocation)}</Text>
+      </View>
     </View>
   );
 };
